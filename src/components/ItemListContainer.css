@@ -5,13 +5,28 @@
 }
 .detalleProducto {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
+}
+#detalleProducto {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5%;
+        padding-bottom: 5%;
 }
 .botonCarrito {
     text-align: center;
     background: linear-gradient(to right, white 10%, rgb(212, 212, 2));
+}
+.boton1 {
+    margin-bottom: 0.5rem;
+}
+.botonFlex {
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+    font-weight: bold;
 }
 .imgCard {
     width: 256px;

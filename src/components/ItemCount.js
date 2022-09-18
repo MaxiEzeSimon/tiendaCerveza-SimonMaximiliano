@@ -22,19 +22,21 @@ const ItemCount = ({initial, stock, onAdd}) => {
     swal("Has comprado " + count + " producto/s.");
     setCount(1)
    }
-   
    return (
     <>
         <div className="itemCount">
-            <div>
-                <p className="descripcion">Andes Ipa x6u.</p>
-            </div>
+            
             <div className="cantidades cantidadFlex">
-                <Button onClick={restar}variant="dark">-</Button>
+                <div className="contadorFlex">
+                <p className="quantity">Cantidad</p>
+                <Button className="botonResta" onClick={restar} variant="dark">-</Button>
                 <p className="numero">{count}</p>
-                <Button onClick={sumar}variant="dark">+</Button>
+                <Button className="botonSuma" onClick={sumar} variant="dark">+</Button>
+                </div>
+                <hr />
+                <Button className="cartButton" onClick={agregarCarrito} variant="dark">AGREGAR AL CARRITO</Button>
             </div>
-            <Button onClick={agregarCarrito} className="cantidades" variant="dark">Agregar al carrito</Button>
+            
         </div>
     </>)
 }

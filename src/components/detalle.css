@@ -1,0 +1,92 @@
+@font-face {
+    font-family: roboto;
+    src: url(../assets/fonts/RobotoMono-Bold.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(../assets/fonts/Oswald-Bold.ttf);
+}
+.descripcion {
+    display: flex;
+    justify-content: center !important;
+}
+.resumen {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+}
+.codigo {
+    font-family: roboto;
+    opacity: 0.6;
+}
+.tituloNombre {
+    font-family: roboto;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.categoria {
+    font-family: roboto;
+    opacity: 0.8;
+    padding-top: 0.3rem;
+}
+.price {
+    margin-top: 2.5rem;
+    font-family: oswald;
+    font-size: 1.3rem;
+}
+.cartButton {
+    font-family: oswald;
+    font-weight: bolder !important;
+}
+.stock {
+    font-family: oswald;
+    opacity: 0.5;
+}
+.miniaturaFoto {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+}
+.fotoPequenia {
+    background: grey;
+}
+.estiloFoto {
+    cursor: pointer;
+    border: 0.5px solid rgb(201, 198, 198);
+    margin-bottom: 0.7rem;
+}
+.estiloFoto:hover {
+    box-shadow: 2px 2px 5px black;
+}
+.especificaciones {
+    display: flex;
+    flex-direction: column;
+    
+}
+.lista {
+    display: flex;
+    background-color: rgb(238, 236, 236);
+    font-weight: bold;
+    opacity: 0.9;
+    font-family: roboto;
+    justify-content: space-between;
+    padding-left: 0.7rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.7rem;
+}
+.lista2 {
+    display: flex;
+    background-color: rgb(204, 202, 202);
+    font-weight: bold;
+    opacity: 0.9;
+    font-family: roboto;
+    justify-content: space-between;
+    padding-left: 0.7rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.7rem;
+}
+h4 {
+    font-family: roboto;
+}

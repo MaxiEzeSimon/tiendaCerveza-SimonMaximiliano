@@ -2,10 +2,10 @@
 export const productos = [
     {
         id: 1,
-        nombre: "Andes Ipa Pack x6",
+        nombre: "Andes Ipa Pack (x6u)",
         categoria: "ipa",
         imagen: "assets/ipa.jpg",
-        precio:"$1200",
+        precio:"$1.200,00",
         stock: 50
     },
     {

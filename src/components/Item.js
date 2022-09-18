@@ -13,7 +13,10 @@ const Item = ({ product }) => {
             <Card.Text className='precio'>
               Precio: {product.precio}
             </Card.Text>
-            <Button variant="dark">Agregar al carrito</Button>
+            <div className='botonFlex'>
+            <Button className="boton1" variant="dark">Agregar al carrito</Button>
+            <Button className="boton1" variant="dark">Detalle</Button>
+            </div>
           </Card.Body>
         </Card>
       </>

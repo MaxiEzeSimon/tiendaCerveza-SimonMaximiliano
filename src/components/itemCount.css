@@ -4,10 +4,6 @@
     justify-content: center;
     padding-bottom: 0.5%;
     margin-top: 2%;
-    margin-left: 42%;
-    margin-right: 42%;
-    background: linear-gradient(to right, white 10%, rgb(212, 212, 2));
-    border: 1px solid grey;
 }
 .descripcion {
     font-weight: bold;
@@ -16,11 +12,10 @@
 }
 .cantidades {
     padding-top: 5%;
-    padding-left: 2%;
 }
 .cantidadFlex {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding-bottom: 4%;
 }
 .numero {
@@ -29,4 +24,24 @@
     padding-right: 10%;
     font-size: 1.2rem;
     margin-bottom: 0;
+}
+.quantity {
+    font-family: roboto;
+    margin-right: 5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0 !important;
+    
+}
+.botonResta {
+    padding-right: 5.7px !important;
+    padding-left: 5.7px !important;
+    padding-top: 2px !important;
+}
+.botonSuma {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+    padding-top: 2px !important;
+}
+.contadorFlex {
+    display: flex;
 }

@@ -1,19 +1,25 @@
 import ItemDetail from "./ItemDetail"
 import { useEffect, useState } from "react"
-import { getItem } from "../utils/getItem"
 import Spinner from 'react-bootstrap/Spinner';
-import {productos} from "../utils/productos"
+import { productos } from "../utils/productos"
+import { useParams } from "react-router-dom"
+import { promise } from "../utils/promise"
+
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState([])
     const [cargaDetalle, setCargaDetalle] = useState(true)
+    
+    const {IdProducto} = useParams()
+   
+    
 
     useEffect(() => {
         setCargaDetalle(true)
-        getItem(productos[0])
+        promise(productos)
          .then(res => {
             setCargaDetalle(false)
-            setProductDetail(res)
+            setProductDetail(res.find(data => data.id === parseInt(IdProducto)))
          })
     }, [])
     return (

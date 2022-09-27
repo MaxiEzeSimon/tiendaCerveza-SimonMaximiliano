@@ -3,28 +3,28 @@ import ItemCount from "./ItemCount"
 import { useState } from "react"
 
 const ItemDetail = ({productDetail}) => {
-    const [fotoDetalle, setFotoDetalle] = useState("assets/ipa.jpg")
+    const [fotoDetalle, setFotoDetalle] = useState(productDetail.imagen)
     const cambiarFoto = () => {
-        setFotoDetalle("assets/ipa.jpg")
+        setFotoDetalle(productDetail.imagen)
     }
     const cambiarFoto1 = () => {
-        setFotoDetalle("assets/ipa-andes.jpg")
+        setFotoDetalle(productDetail.imagen2)
     }
     const cambiarFoto2 = () => {
-        setFotoDetalle("assets/ip-andes-3.jpg")
+        setFotoDetalle(productDetail.imagen3)
     }
     const cambiarFoto3 = () => {
-        setFotoDetalle("assets/andes-latas.jpg")
+        setFotoDetalle(productDetail.imagen4)
     }
     return (
         <>
             <div className="especificaciones">
             <div className="descripcion">
                 <div className="miniaturaFoto">
-                <img onClick={cambiarFoto} className="estiloFoto" src="assets/ipa.jpg" width="60px" height="60px" alt="" />
-                <img onClick={cambiarFoto1} className="estiloFoto" src="assets/ipa-andes.jpg" width="60px" height="60px" alt="" />
-                <img onClick={cambiarFoto2} className="estiloFoto" src="assets/ip-andes-3.jpg" width="60px" height="60px" alt="" />
-                <img onClick={cambiarFoto3} className="estiloFoto" src="assets/andes-latas.jpg" width="60px" height="60px" alt="" />
+                <img onClick={cambiarFoto} className="estiloFoto" src={productDetail.imagen} width="60px" height="60px" alt="" />
+                <img onClick={cambiarFoto1} className="estiloFoto" src={productDetail.imagen2} width="60px" height="60px" alt="" />
+                <img onClick={cambiarFoto2} className="estiloFoto" src={productDetail.imagen3} width="60px" height="60px" alt="" />
+                <img onClick={cambiarFoto3} className="estiloFoto" src={productDetail.imagen4} width="60px" height="60px" alt="" />
                 </div>
             <img src={fotoDetalle}  height="256px" alt="" />
             <div className="resumen">

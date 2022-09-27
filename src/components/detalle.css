@@ -3,6 +3,10 @@
     src: url(../assets/fonts/RobotoMono-Bold.ttf);
 }
 @font-face {
+    font-family: raleway;
+    src: url(../assets/fonts/Raleway-Light.ttf);
+}
+@font-face {
     font-family: oswald;
     src: url(../assets/fonts/Oswald-Bold.ttf);
 }

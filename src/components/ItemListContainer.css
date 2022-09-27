@@ -2,6 +2,7 @@
    display: flex;
    justify-content: center;
    padding-top: 10%;
+   padding-bottom: 10%;
 }
 .detalleProducto {
     display: flex;
@@ -11,22 +12,54 @@
 }
 #detalleProducto {
         display: flex;
-        justify-content: space-around;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        margin-bottom: 10rem;
+        padding-right: 2rem;
+        padding-left: 5rem;
 }
 .botonCarrito {
     text-align: center;
-    background: linear-gradient(to right, white 10%, rgb(212, 212, 2));
+    background: rgb(199, 199, 199) !important;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+.botonCarrito:hover {
+    box-shadow: 4px 4px 4px 3px black ;
 }
 .boton1 {
     margin-bottom: 0.5rem;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.1rem;
+}
+.boton2 {
+    width: 100%;
+    margin-right: 0 !important;
+}
+.boton2 button {
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
 }
 .botonFlex {
     display: flex;
     flex-direction: column;
     font-family: roboto;
     font-weight: bold;
+}
+.slogan {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-family: oswald;
+    margin-bottom: 10rem;
+}
+div .slogan h3 {
+    font-size: 3rem;
+}
+div .slogan p {
+    opacity: 0.9;
+    letter-spacing: 0.1rem;
 }
 .imgCard {
     width: 256px;
@@ -35,9 +68,68 @@
 }
 .precio {
     font-weight: bold;
-    font-style: italic;
     opacity: 0.9;
+    font-family: oswald;
+    letter-spacing: 0.1rem;
 }
 .nombre {
-    text-decoration: underline;
+    font-family: roboto;
 }
+.tituloFooter {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+.cajasFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+    font-family: raleway;
+}
+.subtituloFooter {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 550;
+    cursor: pointer;
+}
+.subtituloFooter1 {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 550;
+    letter-spacing: 0.1rem;
+    padding-right: 3.5rem;
+}
+.subtituloFooter:hover {
+    opacity: 0.6;
+}
+.logoFb {
+    background-color: white;
+    margin-right: 1rem;
+    border-radius: 75%;
+    margin-top: 1.5rem;
+    width: 32px;
+    height: 32px;
+}
+.logoFb:hover {
+    opacity: 0.6;
+}
+.mediosPago {
+    width: 32px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+.footerTitulo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+

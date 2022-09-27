@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link, NavLink } from 'react-router-dom';
 import "./ItemListContainer.css"
 
 const Item = ({ product }) => {
-  
     return (
       <>
         <Card className="botonCarrito" style={{ width: '18rem' }}>
@@ -15,7 +15,7 @@ const Item = ({ product }) => {
             </Card.Text>
             <div className='botonFlex'>
             <Button className="boton1" variant="dark">Agregar al carrito</Button>
-            <Button className="boton1" variant="dark">Detalle</Button>
+            <Link className='boton2' to={`/productos/${product.id}`}><Button variant="dark">Detalle</Button></Link>
             </div>
           </Card.Body>
         </Card>

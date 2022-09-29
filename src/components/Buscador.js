@@ -3,7 +3,7 @@ const Buscador = () => {
     return (
         <>
         
-        <input className="buscador" type="search" placeholder=" Buscar un producto..." />
+        <input className="buscador" type="search" placeholder="Buscar un producto..." />
         </>
     )
 }

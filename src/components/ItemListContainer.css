@@ -1,8 +1,26 @@
 .carga {
    display: flex;
-   justify-content: center;
-   padding-top: 10%;
    padding-bottom: 10%;
+   padding-left: 25%;
+}
+.carga img {
+    width: 300px;
+    height: 300px;
+}
+#carga1 {
+    padding-top: 7%;
+}
+.spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12%;
+    padding-left: 8%;
+}
+.spinner span {
+    padding-left: 5%;
+    font-family: oswald;
+    font-size: 1.5rem;
 }
 .detalleProducto {
     display: flex;
@@ -29,16 +47,21 @@
 }
 .boton1 {
     margin-bottom: 0.5rem;
-    font-size: 1.1rem !important;
+    font-size: 0.5rem !important;
     letter-spacing: 0.1rem;
+
 }
 .boton2 {
     width: 100%;
     margin-right: 0 !important;
 }
+.cardBody {
+    padding-top: 0.3rem !important;
+    padding-bottom: 1rem !important;
+}
 .boton2 button {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 0.5rem;
     letter-spacing: 0.1rem;
 }
 .botonFlex {
@@ -52,18 +75,18 @@
     text-align: center;
     flex-direction: column;
     font-family: oswald;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 div .slogan h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 div .slogan p {
     opacity: 0.9;
     letter-spacing: 0.1rem;
 }
 .imgCard {
-    width: 256px;
-    height: 256px;
+    width: 180px !important;
+    height: 180px;
     border: 1px solid grey;
 }
 .precio {
@@ -71,13 +94,16 @@ div .slogan p {
     opacity: 0.9;
     font-family: oswald;
     letter-spacing: 0.1rem;
+    font-size: 0.6rem !important;
 }
 .nombre {
     font-family: roboto;
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
 }
 .tituloFooter {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-top: 3rem;
 }
 .cajasFooter {
@@ -95,13 +121,13 @@ footer {
 }
 .subtituloFooter {
     padding-top: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 550;
     cursor: pointer;
 }
 .subtituloFooter1 {
     padding-top: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 550;
     letter-spacing: 0.1rem;
     padding-right: 3.5rem;

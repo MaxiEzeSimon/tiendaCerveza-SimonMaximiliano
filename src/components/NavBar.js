@@ -8,7 +8,7 @@ const NavBar = ()=> {
     return (
     <>
     <div className="header">
-    <Link to="/"><img src={logo}></img></Link>
+    <Link to="/"><img className="logo" src={logo}></img></Link>
     <CartWidget/>
     
     </div>

@@ -4,6 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import { productos } from "../utils/productos"
 import { useParams } from "react-router-dom"
 import { promise } from "../utils/promise"
+import cargando from "../assets/cargando.webp"
 
 
 const ItemDetailContainer = () => {
@@ -26,7 +27,13 @@ const ItemDetailContainer = () => {
     <>
     {!cargaDetalle ? 
     <div className="detalleProducto"><ItemDetail productDetail={productDetail} /></div> :
-    <div className="carga"><Spinner animation="border" role="status"></Spinner></div>}
+    <div className="carga" id="carga1">
+                <img src={cargando} alt="" />
+                <div className="spinner">
+                    <Spinner animation="border" role="status"></Spinner>
+                    <span>Cargando</span>
+                </div>
+    </div>}
     </>)
 }
 export default ItemDetailContainer

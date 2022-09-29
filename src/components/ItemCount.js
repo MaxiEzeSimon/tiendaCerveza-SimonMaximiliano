@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "./itemCount.css"
-import swal from 'sweetalert';
 import Button from 'react-bootstrap/Button';
 
 const ItemCount = ({initial, stock, onAdd}) => {
@@ -18,10 +17,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
             setCount(count - 1)
         }
    }
-   const agregarCarrito = () => {
-    swal("Has comprado " + count + " producto/s.");
-    setCount(1)
-   }
    return (
     <>
         <div className="itemCount">
@@ -34,7 +29,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
                 <Button className="botonSuma" onClick={sumar} variant="dark">+</Button>
                 </div>
                 <hr />
-                <Button className="cartButton" onClick={agregarCarrito} variant="dark">AGREGAR AL CARRITO</Button>
+                <Button className="cartButton" onClick={onAdd} variant="dark">AGREGAR AL CARRITO</Button>
             </div>
             
         </div>

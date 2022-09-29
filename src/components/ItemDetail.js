@@ -1,6 +1,8 @@
 import "./detalle.css"
 import ItemCount from "./ItemCount"
 import { useState } from "react"
+import Button from 'react-bootstrap/Button';
+import {Link} from "react-router-dom"
 
 const ItemDetail = ({productDetail}) => {
     const [fotoDetalle, setFotoDetalle] = useState(productDetail.imagen)
@@ -16,6 +18,10 @@ const ItemDetail = ({productDetail}) => {
     const cambiarFoto3 = () => {
         setFotoDetalle(productDetail.imagen4)
     }
+    const [addProduct, setAddProduct] = useState(false)
+    const onAdd = () => {
+        setAddProduct(true)
+    }
     return (
         <>
             <div className="especificaciones">
@@ -26,13 +32,20 @@ const ItemDetail = ({productDetail}) => {
                 <img onClick={cambiarFoto2} className="estiloFoto" src={productDetail.imagen3} width="60px" height="60px" alt="" />
                 <img onClick={cambiarFoto3} className="estiloFoto" src={productDetail.imagen4} width="60px" height="60px" alt="" />
                 </div>
-            <img src={fotoDetalle}  height="256px" alt="" />
+            <img className="imgDetalle" src={fotoDetalle}  alt="" />
             <div className="resumen">
-            <p className="tituloNombre">{productDetail.nombre}</p>
+            <p className="tituloNombre">{productDetail.nombre} x6u.</p>
             <p className="categoria">Categoria: {productDetail.categoria.toUpperCase()}</p>
             <p className="price">{productDetail.precio}</p>
             <p className="stock">Stock: {productDetail.stock}u.</p>
-            <ItemCount initial={1} stock={50} onAdd={() =>{}}/>
+            {
+                addProduct ?
+                <Link to="/carrito" className="noMargin">
+                    <Button className="cartButton" variant="dark">Finalizar Compra</Button>
+                </Link> :
+                <ItemCount initial={1} stock={50} onAdd={onAdd}/>
+            }
+            
             
             </div>
             </div>

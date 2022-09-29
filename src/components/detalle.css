@@ -25,26 +25,29 @@
 }
 .tituloNombre {
     font-family: roboto;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 .categoria {
     font-family: roboto;
     opacity: 0.8;
     padding-top: 0.3rem;
+    font-size: 0.8rem;
 }
 .price {
     margin-top: 2.5rem;
     font-family: oswald;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 .cartButton {
     font-family: oswald;
     font-weight: bolder !important;
+    font-size: 0.8rem !important;
 }
 .stock {
     font-family: oswald;
     opacity: 0.5;
+    font-size: 0.8rem;
 }
 .miniaturaFoto {
     display: flex;
@@ -53,6 +56,10 @@
 }
 .fotoPequenia {
     background: grey;
+}
+.imgDetalle {
+    width: 200px;
+    height: 200px;
 }
 .estiloFoto {
     cursor: pointer;

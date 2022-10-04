@@ -1,11 +1,16 @@
 import "./detalle.css"
 import ItemCount from "./ItemCount"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import Button from 'react-bootstrap/Button';
 import {Link} from "react-router-dom"
+import {Carrito} from "./CartContext"
 
 const ItemDetail = ({productDetail}) => {
     const [fotoDetalle, setFotoDetalle] = useState(productDetail.imagen)
+    const [addProduct, setAddProduct] = useState(false)
+
+    const { añadirProducto } = useContext(Carrito)
+
     const cambiarFoto = () => {
         setFotoDetalle(productDetail.imagen)
     }
@@ -18,9 +23,9 @@ const ItemDetail = ({productDetail}) => {
     const cambiarFoto3 = () => {
         setFotoDetalle(productDetail.imagen4)
     }
-    const [addProduct, setAddProduct] = useState(false)
-    const onAdd = () => {
+    const onAdd = (count) => {
         setAddProduct(true)
+        añadirProducto(productDetail, count)
     }
     return (
         <>

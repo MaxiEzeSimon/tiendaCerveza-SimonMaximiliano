@@ -8,3 +8,9 @@
 .hrCart {
   margin-bottom: 15rem;
 }
+@media (max-width: 900px) {
+  .productos {
+    font-size: calc(0.9rem + .9vw);
+    padding-left: 1.5rem;
+  }
+}

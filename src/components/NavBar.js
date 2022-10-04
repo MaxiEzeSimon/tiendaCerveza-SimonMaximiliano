@@ -7,6 +7,7 @@ import {Link, NavLink} from "react-router-dom"
 const NavBar = ()=> {
     return (
     <>
+  
     <div className="header">
     <Link to="/"><img className="logo" src={logo}></img></Link>
     <CartWidget/>
@@ -23,7 +24,6 @@ const NavBar = ()=> {
             <Buscador/>
         </div>
     </nav>
-    
     </>
     )
 }

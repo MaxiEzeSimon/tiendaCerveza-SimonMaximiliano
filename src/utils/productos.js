@@ -49,7 +49,7 @@ export const productos = [
         imagen2: ipaA2,
         imagen3: ipaA3,
         imagen4: ipaA4,
-        precio:"$1.200,00",
+        precio: "$1200,00",
         stock: 50
     },
     {
@@ -60,7 +60,7 @@ export const productos = [
         imagen2: oriA2,
         imagen3: oriA3,
         imagen4: ipaA4,
-        precio:"$1.000,00",
+        precio: "$1000,00",
         stock: 50
     },
     {
@@ -71,7 +71,7 @@ export const productos = [
         imagen2: rojA2 ,
         imagen3: rojA3 ,
         imagen4: ipaA4 ,
-        precio:"$1.200,00",
+        precio: "$1200,00",
         stock: 50
     },
     {
@@ -82,7 +82,7 @@ export const productos = [
         imagen2: corona1,
         imagen3: corona2,
         imagen4: corona3,
-        precio:"$2.000,00",
+        precio:"$2000,00",
         stock: 50
     },
     {
@@ -93,7 +93,7 @@ export const productos = [
         imagen2: ipaP2,
         imagen3: ipaP3,
         imagen4: ipaP4,
-        precio:"$1.900,00",
+        precio:"$1900,00",
         stock: 50
     },
     {
@@ -104,7 +104,7 @@ export const productos = [
         imagen2: ipaI2,
         imagen3: ipaI3,
         imagen4: ipaI4,
-        precio:"$1.700,00",
+        precio:"$1700,00",
         stock: 50
     },
     {
@@ -115,7 +115,7 @@ export const productos = [
         imagen2: oriI2,
         imagen3: oriI3,
         imagen4: ipaI4,
-        precio:"$1.500,00",
+        precio:"$1500,00",
         stock: 50
     },
     {
@@ -126,7 +126,7 @@ export const productos = [
         imagen2: stella1,
         imagen3: stella2,
         imagen4: stella3,
-        precio:"$1.900,00",
+        precio:"$1900,00",
         stock: 50
     },
     {
@@ -137,7 +137,7 @@ export const productos = [
         imagen2: bud2,
         imagen3: bud3,
         imagen4: bud4,
-        precio:"$1.800,00",
+        precio:"$1800,00",
         stock: 50
     },
     {
@@ -148,7 +148,7 @@ export const productos = [
         imagen2: hein2,
         imagen3: hein3,
         imagen4: hein4,
-        precio:"$1.900,00",
+        precio:"$1900,00",
         stock: 50
     },
     {
@@ -159,7 +159,7 @@ export const productos = [
         imagen2: scr2,
         imagen3: scr3,
         imagen4: scr4,
-        precio:"$1.800,00",
+        precio:"$1800,00",
         stock: 50
     },
 ]

@@ -35,13 +35,25 @@
         margin-bottom: 10rem;
         padding-right: 2rem;
         padding-left: 5rem;
+        
 }
 .botonCarrito {
     text-align: center;
     background: rgb(199, 199, 199) !important;
     margin-top: 2rem;
     margin-left: 3rem;
+    animation-duration: 1s;
+    animation-name: slide;
 }
+@keyframes slide {
+    from {
+      margin-top: 0;
+    }
+  
+    to {
+      margin-top: 2rem;
+    }
+  }
 .botonCarrito:hover {
     box-shadow: 4px 4px 4px 3px black ;
 }

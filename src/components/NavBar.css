@@ -3,7 +3,7 @@
     padding-top: 2%;
     padding-left: 3%;
     padding-right: 4%;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     justify-content: space-between;
     background-color: black;
 }
@@ -11,12 +11,37 @@
     height: 130px;
     width: 130px;
 }
-.ImgCart {
-    margin-right: 0;
+.cartFlex {
+    margin: 0;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.divCart div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.884);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    padding:3%;
+   
+    
+}
+.divCart div p {
+    margin: 0 !important;
+    -webkit-text-stroke: 1px orange !important;
+    font-family: raleway;
+    letter-spacing: 0.1rem;
 }
 .divCart {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: end;
 }
 .carrito {
     width: 30px;

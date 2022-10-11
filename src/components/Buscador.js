@@ -1,4 +1,4 @@
-import lupa from "../assets/lupa.png"
+
 const Buscador = () => {
     return (
         <>

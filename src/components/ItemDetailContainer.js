@@ -1,11 +1,10 @@
 import ItemDetail from "./ItemDetail"
 import { useEffect, useState } from "react"
 import Spinner from 'react-bootstrap/Spinner';
-import { productos } from "../utils/productos"
 import { useParams } from "react-router-dom"
-import { promise } from "../utils/promise"
 import cargando from "../assets/cargando.webp"
-
+import { baseDatos } from "../components/firebase/firebase"
+import {getDoc, doc, collection} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState([])
@@ -16,13 +15,23 @@ const ItemDetailContainer = () => {
     
 
     useEffect(() => {
-        setCargaDetalle(true)
-        promise(productos)
-         .then(res => {
+
+        const productCollection = collection(baseDatos, "productos")
+        
+        const refDoc = doc(productCollection, IdProducto)
+        
+        getDoc(refDoc)
+         .then((res) => {
             setCargaDetalle(false)
-            setProductDetail(res.find(data => data.id === parseInt(IdProducto)))
+            setProductDetail({
+                id: res.id,
+                ...res.data()
+                
+
+            })
          })
     }, [])
+    
     return (
     <>
     {!cargaDetalle ? 

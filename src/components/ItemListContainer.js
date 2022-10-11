@@ -1,30 +1,43 @@
 import ItemList from "./ItemList"
-import { productos } from "../utils/productos"
-import { promise } from "../utils/promise"
 import { useEffect, useState } from "react"
 import Spinner from 'react-bootstrap/Spinner';
 import { useParams } from "react-router-dom";
 import cargando from "../assets/cargando.webp"
+import { baseDatos } from "../components/firebase/firebase"
+import {getDocs, collection, query, where} from "firebase/firestore"
 
 const ItemListContainer = ({greeting}) => {
     const [productList, setProductList] = useState([])
     const [loading, setLoading] = useState(true)
     
     let { Categoria } = useParams();
-    
+   
 
     useEffect(()=> {
-        setLoading(true)
-        promise(Categoria == undefined ? productos : productos.filter(data => { return Categoria == data.categoria}))
-            .then(res => {
-                setLoading(false)
-                setProductList(res)
+        const productsCollection = collection(baseDatos, "productos")
+
+        const querie = query(productsCollection, where("categoria", "==", Categoria == undefined ? "categoria" : Categoria))
+        
+        getDocs(Categoria == undefined ? productsCollection : querie)
+            .then ((res) => {
+                
+                const listaProductos = res.docs.map((producto) => {
+                    return {
+                        ...producto.data(),
+                        id: producto.id
+                    }
+                  
             })
+            setProductList(listaProductos)
+            setLoading(false)
+         })
+        
         }, [Categoria])
     return (
         <>
             <h2 className="productos">{greeting}</h2>
             <hr />
+            
             {!loading ? 
             <>
                 <div id="detalleProducto"><ItemList productList={productList} /></div>
@@ -39,7 +52,7 @@ const ItemListContainer = ({greeting}) => {
                     <Spinner animation="border" role="status"></Spinner>
                     <span>Cargando</span>
                 </div>
-            </div>} 
+            </div>}
         </>)
     
 

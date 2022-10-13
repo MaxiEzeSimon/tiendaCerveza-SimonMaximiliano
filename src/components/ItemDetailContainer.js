@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
 
             })
          })
-    }, [])
+    })
     
     return (
     <>

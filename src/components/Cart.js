@@ -1,12 +1,46 @@
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import {Carrito} from "./CartContext"
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import { baseDatos } from "../components/firebase/firebase";
+import {serverTimestamp, addDoc, collection} from "firebase/firestore";
+import Swal from 'sweetalert2';
+import Spinner from 'react-bootstrap/Spinner'; 
+
 
 export const Cart = () => {
 
     const {cart, precioTotal, reset, borrarProducto} = useContext(Carrito)
+    const [procesarCompra, setProcesarCompra] = useState(true)
 
+    const datosComprador = {
+        nombre: "Prueba",
+        email: "prueba@gmail.com"
+    }
+
+    const finalizarCompra = () => {
+        setProcesarCompra(false)
+        const ventasCollection = collection(baseDatos, "ventas")
+        addDoc(ventasCollection, {
+            comprador: datosComprador,
+            items: cart,
+            fecha: serverTimestamp(),
+            total: precioTotal
+        })
+    
+        .then(res => {
+            
+            Swal.fire({
+                title: 'Compra realizada con exito!',
+                text: "Id de la compra: " + res.id,
+                icon: 'success',
+                confirmButtonText: 'Cerrar'
+            })
+            reset()
+          
+        })
+    
+    }
     
     return (
     <>
@@ -41,7 +75,7 @@ export const Cart = () => {
         })}
         
         {
-            precioTotal==0 ?
+            precioTotal===0 ?
 
             <p className="productos carritoVacio">Tu carrito esta vacio!. Volver al <Link to="/">Home</Link>.</p> :
 
@@ -49,13 +83,19 @@ export const Cart = () => {
                 <div>
                     <hr/>
                     <Link to="/"><Button className="botonContinuar" variant="dark">CONTINUAR COMPRANDO</Button></Link>
-                    <Button className="botonFinalizar" onClick={reset} variant="dark">FINALIZAR COMPRA</Button>
+                    {   procesarCompra ?
+                        <Button className="botonFinalizar" onClick={finalizarCompra} variant="dark">FINALIZAR COMPRA</Button> :
+                        <Button className="botonFinalizar" variant="dark"> <Spinner animation="border" role="status"></Spinner> </Button>
+                    }
                     <Button className="botonResetear" onClick={reset} variant="dark">BORRAR TODO</Button>
+                    
                 </div>
                 <p>Total: ${precioTotal},00 </p>
                 <hr />
+                
             </div> 
        
         }
+        
     </>)
 }

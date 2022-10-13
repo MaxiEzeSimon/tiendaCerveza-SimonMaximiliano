@@ -52,7 +52,7 @@
 .datosDos {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .datosDos p {
     font-family: roboto;
@@ -62,7 +62,7 @@
 .datosTres {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   margin-left: 12rem;
   font-family: roboto;
 }
@@ -112,7 +112,9 @@
   text-decoration: underline !important;
   margin-right: 0 !important;
 }
-
+.msjExito {
+  font-family: roboto;
+}
 @media (max-width: 900px) {
   .productos {
     font-size: calc(0.9rem + .9vw);

@@ -10,7 +10,7 @@ export const CustomProvider = ({children}) => {
     
         if (estaEnLaLista(productDetail.id)) {
             const newCarrito = cart.map(producto => {
-                if (producto.id == productDetail.id) {
+                if (producto.id === productDetail.id) {
                     const newCantidad = producto.cantidad + count
                     return {...producto, cantidad: newCantidad }
                 }else {
@@ -25,10 +25,10 @@ export const CustomProvider = ({children}) => {
      
     }
     
-    const borrarProducto = (id) => setCart(cart.filter(producto => producto.id != id))
+    const borrarProducto = (id) => setCart(cart.filter(producto => producto.id !== id))
     
     const estaEnLaLista = (id) => {
-      return cart.some(producto => producto.id == id)
+      return cart.some(producto => producto.id === id)
     }
 
     const reset = () => {

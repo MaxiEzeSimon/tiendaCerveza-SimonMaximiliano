@@ -16,9 +16,9 @@ const ItemListContainer = ({greeting}) => {
     useEffect(()=> {
         const productsCollection = collection(baseDatos, "productos")
 
-        const querie = query(productsCollection, where("categoria", "==", Categoria == undefined ? "categoria" : Categoria))
+        const querie = query(productsCollection, where("categoria", "==", Categoria === undefined ? "categoria" : Categoria))
         
-        getDocs(Categoria == undefined ? productsCollection : querie)
+        getDocs(Categoria === undefined ? productsCollection : querie)
             .then ((res) => {
                 
                 const listaProductos = res.docs.map((producto) => {

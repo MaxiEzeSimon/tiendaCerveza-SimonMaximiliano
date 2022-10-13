@@ -2,14 +2,14 @@ import logo from "../assets/logo.png"
 import CartWidget from "./CartWidget"
 import "./NavBar.css"
 import Buscador from "./Buscador"
-import {Link, NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 const NavBar = ()=> {
     return (
     <>
   
     <div className="header">
-    <Link to="/"><img className="logo" src={logo}></img></Link>
+    <Link to="/"><img className="logo" src={logo} alt=""></img></Link>
     <CartWidget/>
     
     </div>

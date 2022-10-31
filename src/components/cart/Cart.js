@@ -1,8 +1,8 @@
 import {useContext, useState} from "react"
-import {Carrito} from "./CartContext"
+import {Carrito} from "../CartContext/CartContext"
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-import { baseDatos } from "../components/firebase/firebase";
+import { baseDatos } from "../firebase/firebase";
 import {serverTimestamp, addDoc, collection} from "firebase/firestore";
 import Swal from 'sweetalert2';
 import Spinner from 'react-bootstrap/Spinner'; 
@@ -14,8 +14,8 @@ export const Cart = () => {
     const [procesarCompra, setProcesarCompra] = useState(true)
 
     const datosComprador = {
-        nombre: "Prueba",
-        email: "prueba@gmail.com"
+        nombre: "Profe",
+        email: "profe@gmail.com"
     }
 
     const finalizarCompra = () => {
@@ -51,7 +51,7 @@ export const Cart = () => {
             const replacePrecio = parseInt(producto.precio.replace("$", ""))
             const cantidad = parseInt(producto.cantidad)
             const subTotal = replacePrecio * cantidad
-
+            
             return (
                 
                 
@@ -75,8 +75,8 @@ export const Cart = () => {
         })}
         
         {
-            precioTotal===0 ?
-
+            precioTotal === 0 ?
+            
             <p className="productos carritoVacio">Tu carrito esta vacio!. Volver al <Link to="/">Home</Link>.</p> :
 
             <div className="totalFinal">

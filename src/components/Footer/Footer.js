@@ -1,11 +1,13 @@
-import fb from "../assets/fb.png"
-import instagram from "../assets/instagram.png"
-import visa from "../assets/visa.png"
-import mastercard from "../assets/mastercard.png"
-import amex from "../assets/amex.png"
-import banelco from "../assets/banelco.png"
-import naranja from "../assets/naranja.png"
+import fb from "../../assets/fb.png"
+import instagram from "../../assets/instagram.png"
+import visa from "../../assets/visa.png"
+import mastercard from "../../assets/mastercard.png"
+import amex from "../../assets/amex.png"
+import banelco from "../../assets/banelco.png"
+import naranja from "../../assets/naranja.png"
+
 const Footer = () => {
+    
     return (
         <>
         <footer>
